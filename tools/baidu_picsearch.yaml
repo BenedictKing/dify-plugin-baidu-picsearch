@@ -1,0 +1,70 @@
+identity:
+  name: baidu_picsearch
+  author: king
+  label:
+    en_US: baidu_picsearch
+    zh_Hans: 百度图搜
+    pt_BR: baidu_picsearch
+description:
+  human:
+    en_US: Call the free Baidu image search
+    zh_Hans: 调用免费的百度图搜
+    pt_BR: Chamar a pesquisa de imagens gratuita do Baidu
+  llm: 调用免费的百度图搜
+parameters:
+  - name: query
+    type: string
+    required: true
+    label:
+      en_US: Query string
+      zh_Hans: 查询语句
+      pt_BR: Query string
+    human_description:
+      en_US: Call the free Baidu image search
+      zh_Hans: 调用免费的百度图搜
+      pt_BR: Chamar a pesquisa de imagens gratuita do Baidu
+    llm_description: 调用免费的百度图搜
+    form: llm
+  - name: baidu_api_key
+    type: secret-input
+    required: true
+    label:
+      en_US: Baidu API Key
+      zh_Hans: 百度API密钥
+      pt_BR: Baidu API Key
+    human_description:
+      en_US: API key for Baidu AppBuilder
+      zh_Hans: 百度AppBuilder的API密钥
+      pt_BR: Chave API do Baidu AppBuilder
+    help:
+      en_US: Please input your Baidu API key (starts with bce-v3/)
+      zh_Hans: 请输入你的百度AppBuilder的API密钥（以bce-v3/开头）
+      pt_BR: Please input your Baidu API key (starts with bce-v3/)
+    placeholder:
+      en_US: bce-v3/xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+      zh_Hans: bce-v3/xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+      pt_BR: bce-v3/xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+    form: llm
+  - name: baidu_app_id
+    type: secret-input
+    required: true
+    label:
+      en_US: Baidu App ID
+      zh_Hans: 百度应用ID
+      pt_BR: Baidu App ID
+    human_description:
+      en_US: Application ID for Baidu AppBuilder
+      zh_Hans: 百度AppBuilder应用ID
+      pt_BR: ID do aplicativo Baidu AppBuilder
+    help:
+      en_US: Please input your Baidu AppBuilder Application ID
+      zh_Hans: 请输入你的百度AppBuilder应用ID
+      pt_BR: Please input your Baidu AppBuilder Application ID
+    placeholder:
+      en_US: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+      zh_Hans: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+      pt_BR: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+    form: llm
+extra:
+  python:
+    source: tools/baidu_picsearch.py
