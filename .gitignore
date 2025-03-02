@@ -170,3 +170,4 @@ cython_debug/
 # Vscode
 .vscode/
 .aider*
+__pycache__/
