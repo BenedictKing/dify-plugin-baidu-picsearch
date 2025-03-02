@@ -1,14 +1,14 @@
 identity:
-  author: king
+  author: BenedictKing
   name: baidu_picsearch
   label:
     en_US: baidu_picsearch
-    zh_Hans: baidu_picsearch
+    zh_Hans: 百度图搜
     pt_BR: baidu_picsearch
   description:
-    en_US: 调用免费的百度图搜
+    en_US: Call the free Baidu image search
     zh_Hans: 调用免费的百度图搜
-    pt_BR: 调用免费的百度图搜
+    pt_BR: Chamar a pesquisa de imagens gratuita do Baidu
   icon: icon.svg
 tools:
   - tools/baidu_picsearch.yaml

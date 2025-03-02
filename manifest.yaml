@@ -1,6 +1,6 @@
 version: 0.0.1
 type: plugin
-author: king
+author: BenedictKing
 name: baidu_picsearch
 label:
   en_US: baidu_picsearch
@@ -8,10 +8,10 @@ label:
   zh_Hans: 百度图搜
   pt_BR: baidu_picsearch
 description:
-  en_US: 调用免费的百度图搜
-  ja_JP: 调用免费的百度图搜
+  en_US: Call the free Baidu image search
+  ja_JP: Call the free Baidu image search
   zh_Hans: 调用免费的百度图搜
-  pt_BR: 调用免费的百度图搜
+  pt_BR: Chamar a pesquisa de imagens gratuita do Baidu
 icon: icon.svg
 resource:
   memory: 268435456
@@ -35,4 +35,4 @@ meta:
     entrypoint: main
 created_at: 2025-03-01T21:00:16.087252+08:00
 privacy: PRIVACY.md
-verified: false
+verified: true
