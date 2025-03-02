@@ -1,6 +1,6 @@
 ## baidu_picsearch
 
-**Author:** king
+**Author:** BenedictKing
 **Version:** 0.0.1
 **Type:** tool
 
