@@ -6,6 +6,12 @@
 
 ### Description
 
+![Dify样例流程图](./images/guide1.png)  
+*图1: Dify中插件调用流程图*
+
+![输出效果图](./images/guide2.png)  
+*图2: 搜索结果示例*
+
 ### 使用说明
 
 1. **配置会话变量**  
