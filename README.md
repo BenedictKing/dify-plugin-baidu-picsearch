@@ -6,6 +6,14 @@
 
 ### Description
 
+### 使用说明
+
+1. **配置会话变量**  
+   在Dify会话变量中添加以下两个必需参数（参考示意图：![guide3](./images/guide3.png）：
+   - `baiduapikey`: 百度图像搜索API密钥
+   - `baiduappid`: 百度开发者应用ID
+
+> 如何获取：请登录百度AI开放平台，创建应用后获取API Key和App ID
 
 ### 异常处理
 
