@@ -14,18 +14,23 @@
 
 ### 使用说明
 
-1. **导入应用配置**  
+1. **一键导入示例应用**  
    创建新应用，选择DSL导入功能：
    ```bash
    dify-example.yml  # 示例应用配置文件
    ```
 
 2. **配置会话变量**  
-   在Dify会话变量中添加或修改以下两个必需参数，分别填入（参考示意图：![guide3](./images/guide3.png）：
+   在Dify会话变量中添加或修改以下两个必需参数，分别填入：
    - `baiduapikey`: 百度图像搜索API密钥
    - `baiduappid`: 百度开发者应用ID
+  
+   参考示意图：![guide3](./images/guide3.png)
 
-> 如何获取：请登录百度AI开放平台，创建应用后获取API Key和App ID
+   > 如何获取：请登录百度AI开放平台，创建应用后获取API Key和App ID
+
+3. **配置插件**
+   配置百度图搜插件参数，参考示意图：![guide4](./images/guide4.png)
 
 ### 异常处理
 
