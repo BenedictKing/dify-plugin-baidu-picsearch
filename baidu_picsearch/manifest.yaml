@@ -1,6 +1,6 @@
 version: 0.0.3
 type: plugin
-author: BenedictKing
+author: king
 name: baidu_picsearch
 label:
   en_US: baidu_picsearch
