@@ -19,6 +19,12 @@
    - `baiduapikey`: 百度图像搜索API密钥
    - `baiduappid`: 百度开发者应用ID
 
+2. **导入应用配置**  
+   创建新应用时选择DSL导入功能（操作示意：![guide4](./images/guide4.png）：
+   ```bash
+   dify-example.yml  # 示例应用配置文件
+   ```
+
 > 如何获取：请登录百度AI开放平台，创建应用后获取API Key和App ID
 
 ### 异常处理
