@@ -19,6 +19,9 @@
    - 点击「新建应用」 
    - 应用类型选择「工作流Agent」
    - 参考流程图：![guide5](./images/guide5.png)
+   - 完成配置后点击「发布」按钮
+   - 在「API/SDK」标签页获取应用ID：  
+     ![appid示意图](./images/guide6.png)
 
 1. **一键导入示例应用**  
    创建新应用，选择DSL导入功能：
@@ -27,11 +30,10 @@
    ```
 
 2. **配置会话变量**  
-   在Dify会话变量中添加或修改以下两个必需参数，分别填入：
+   将在千帆平台获取的ID填入会话变量：
+   - `baiduappid`: 此处填写API/SDK页面的应用ID
    - `baiduapikey`: 百度图像搜索API密钥
-   - `baiduappid`: 百度开发者应用ID
-  
-   参考示意图：![guide3](./images/guide3.png)
+   ![参数配置图](./images/guide3.png)
 
 3. **配置插件**
    配置百度图搜插件参数，参考示意图：![guide4](./images/guide4.png)
