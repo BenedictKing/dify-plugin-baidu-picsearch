@@ -4,6 +4,7 @@ identity:
   label:
     en_US: baidu_picsearch
     zh_Hans: 百度图搜
+  icon: icon.svg
 description:
   human:
     en_US: Call the free Baidu image search
