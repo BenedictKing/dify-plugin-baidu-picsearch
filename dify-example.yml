@@ -1,0 +1,422 @@
+app:
+  description: ""
+  icon: 🤖
+  icon_background: "#FFEAD5"
+  mode: advanced-chat
+  name: dify-example
+  use_icon_as_answer_icon: false
+dependencies:
+  - current_identifier: null
+    type: github
+    value:
+      github_plugin_unique_identifier: king/baidu_picsearch:0.0.3@5298b6a958b78169664ef7f2d6b6af18b5e0e39995262ba4fec33a28b099f537
+      package: baidu_picsearch-0.0.3.difypkg
+      repo: BenedictKing/dify-plugin-baidu-picsearch
+      version: 0.0.3
+kind: app
+version: 0.1.5
+workflow:
+  conversation_variables:
+    - description: ""
+      id: cdcc598d-a551-417d-8da6-9e25ae0e59a4
+      name: baiduappid
+      selector:
+        - conversation
+        - baiduappid
+      value: ewkljkl
+      value_type: string
+    - description: ""
+      id: d92b800f-9c52-498b-990f-03ea90864a15
+      name: baiduapikey
+      selector:
+        - conversation
+        - baiduapikey
+      value: bce-v3/dsfklsdjk
+      value_type: string
+  environment_variables: []
+  features:
+    file_upload:
+      allowed_file_extensions:
+        - .JPG
+        - .JPEG
+        - .PNG
+        - .GIF
+        - .WEBP
+        - .SVG
+      allowed_file_types:
+        - image
+      allowed_file_upload_methods:
+        - local_file
+        - remote_url
+      enabled: false
+      fileUploadConfig:
+        audio_file_size_limit: 50
+        batch_count_limit: 5
+        file_size_limit: 15
+        image_file_size_limit: 10
+        video_file_size_limit: 100
+        workflow_file_upload_limit: 10
+      image:
+        enabled: false
+        number_limits: 3
+        transfer_methods:
+          - local_file
+          - remote_url
+      number_limits: 3
+    opening_statement: ""
+    retriever_resource:
+      enabled: true
+    sensitive_word_avoidance:
+      enabled: false
+    speech_to_text:
+      enabled: false
+    suggested_questions: []
+    suggested_questions_after_answer:
+      enabled: false
+    text_to_speech:
+      enabled: false
+      language: ""
+      voice: ""
+  graph:
+    edges:
+      - data:
+          isInIteration: false
+          sourceType: code
+          targetType: iteration
+        id: 1740903751454-source-1740904013891-target
+        selected: false
+        source: "1740903751454"
+        sourceHandle: source
+        target: "1740904013891"
+        targetHandle: target
+        type: custom
+        zIndex: 0
+      - data:
+          isInIteration: true
+          iteration_id: "1740904013891"
+          sourceType: iteration-start
+          targetType: code
+        id: 1740904013891start-source-1740904127108-target
+        selected: false
+        source: 1740904013891start
+        sourceHandle: source
+        target: "1740904127108"
+        targetHandle: target
+        type: custom
+        zIndex: 1002
+      - data:
+          isInIteration: true
+          iteration_id: "1740904013891"
+          sourceType: code
+          targetType: answer
+        id: 1740904127108-source-1740904250559-target
+        selected: false
+        source: "1740904127108"
+        sourceHandle: source
+        target: "1740904250559"
+        targetHandle: target
+        type: custom
+        zIndex: 1002
+      - data:
+          isInIteration: false
+          sourceType: start
+          targetType: tool
+        id: 1740753575506-source-1740965517720-target
+        source: "1740753575506"
+        sourceHandle: source
+        target: "1740965517720"
+        targetHandle: target
+        type: custom
+        zIndex: 0
+      - data:
+          isInIteration: false
+          sourceType: tool
+          targetType: code
+        id: 1740965517720-source-1740903751454-target
+        source: "1740965517720"
+        sourceHandle: source
+        target: "1740903751454"
+        targetHandle: target
+        type: custom
+        zIndex: 0
+    nodes:
+      - data:
+          desc: ""
+          selected: false
+          title: 开始
+          type: start
+          variables: []
+        height: 54
+        id: "1740753575506"
+        position:
+          x: 30
+          y: 286
+        positionAbsolute:
+          x: 30
+          y: 286
+        selected: false
+        sourcePosition: right
+        targetPosition: left
+        type: custom
+        width: 244
+      - data:
+          desc: ""
+          is_team_authorization: true
+          output_schema: null
+          paramSchemas:
+            - auto_generate: null
+              default: null
+              form: llm
+              human_description:
+                en_US: Call the free Baidu image search
+                ja_JP: Call the free Baidu image search
+                pt_BR: Call the free Baidu image search
+                zh_Hans: 调用免费的百度图搜
+              label:
+                en_US: Query string
+                ja_JP: Query string
+                pt_BR: Query string
+                zh_Hans: 查询语句
+              llm_description: 调用免费的百度图搜
+              max: null
+              min: null
+              name: query
+              options: []
+              placeholder: null
+              precision: null
+              required: true
+              scope: null
+              template: null
+              type: string
+            - auto_generate: null
+              default: null
+              form: llm
+              human_description:
+                en_US: API key for Baidu AppBuilder
+                ja_JP: API key for Baidu AppBuilder
+                pt_BR: API key for Baidu AppBuilder
+                zh_Hans: 百度AppBuilder的API密钥
+              label:
+                en_US: Baidu API Key
+                ja_JP: Baidu API Key
+                pt_BR: Baidu API Key
+                zh_Hans: 百度API密钥
+              llm_description: ""
+              max: null
+              min: null
+              name: baidu_api_key
+              options: []
+              placeholder: null
+              precision: null
+              required: true
+              scope: null
+              template: null
+              type: secret-input
+            - auto_generate: null
+              default: null
+              form: llm
+              human_description:
+                en_US: Application ID for Baidu AppBuilder
+                ja_JP: Application ID for Baidu AppBuilder
+                pt_BR: Application ID for Baidu AppBuilder
+                zh_Hans: 百度AppBuilder应用ID
+              label:
+                en_US: Baidu App ID
+                ja_JP: Baidu App ID
+                pt_BR: Baidu App ID
+                zh_Hans: 百度应用ID
+              llm_description: ""
+              max: null
+              min: null
+              name: baidu_app_id
+              options: []
+              placeholder: null
+              precision: null
+              required: true
+              scope: null
+              template: null
+              type: secret-input
+          params:
+            baidu_api_key: ""
+            baidu_app_id: ""
+            query: ""
+          provider_id: king/baidu_picsearch/baidu_picsearch
+          provider_name: king/baidu_picsearch/baidu_picsearch
+          provider_type: builtin
+          selected: false
+          title: 百度图搜
+          tool_configurations: {}
+          tool_label: 百度图搜
+          tool_name: baidu_picsearch
+          tool_parameters:
+            baidu_api_key:
+              type: mixed
+              value: "{{#conversation.baiduapikey#}}"
+            baidu_app_id:
+              type: mixed
+              value: "{{#conversation.baiduappid#}}"
+            query:
+              type: mixed
+              value: "{{#sys.query#}}"
+          type: tool
+        height: 54
+        id: "1740965517720"
+        position:
+          x: 334
+          y: 286
+        positionAbsolute:
+          x: 334
+          y: 286
+        selected: true
+        sourcePosition: right
+        targetPosition: left
+        type: custom
+        width: 244
+      - data:
+          code:
+            "\ndef main(data: dict) -> list:\n    urls=data[0][\"data\"][\"urls\"\
+            ]\n    return {\n        \"result\": urls,\n    }\n"
+          code_language: python3
+          desc: ""
+          outputs:
+            result:
+              children: null
+              type: array[string]
+          selected: false
+          title: 提取urls
+          type: code
+          variables:
+            - value_selector:
+                - "1740965517720"
+                - json
+              variable: data
+        height: 54
+        id: "1740903751454"
+        position:
+          x: 30
+          y: 405.99999999999994
+        positionAbsolute:
+          x: 30
+          y: 405.99999999999994
+        selected: false
+        sourcePosition: right
+        targetPosition: left
+        type: custom
+        width: 244
+      - data:
+          desc: ""
+          error_handle_mode: terminated
+          height: 172
+          is_parallel: false
+          iterator_selector:
+            - "1740903751454"
+            - result
+          output_selector:
+            - "1740904127108"
+            - result
+          output_type: array[string]
+          parallel_nums: 10
+          selected: false
+          start_node_id: 1740904013891start
+          title: 迭代
+          type: iteration
+          width: 692
+        height: 172
+        id: "1740904013891"
+        position:
+          x: 334
+          y: 405.99999999999994
+        positionAbsolute:
+          x: 334
+          y: 405.99999999999994
+        selected: false
+        sourcePosition: right
+        targetPosition: left
+        type: custom
+        width: 692
+        zIndex: 1
+      - data:
+          desc: ""
+          isInIteration: true
+          selected: false
+          title: ""
+          type: iteration-start
+        draggable: false
+        height: 48
+        id: 1740904013891start
+        parentId: "1740904013891"
+        position:
+          x: 24
+          y: 68
+        positionAbsolute:
+          x: 358
+          y: 473.99999999999994
+        selectable: false
+        sourcePosition: right
+        targetPosition: left
+        type: custom-iteration-start
+        width: 44
+        zIndex: 1002
+      - data:
+          code:
+            "\ndef main(url: str) -> dict:\n    return {\n        \"result\": '![image]('+url+')',\n\
+            \    }\n"
+          code_language: python3
+          desc: ""
+          isInIteration: true
+          iteration_id: "1740904013891"
+          outputs:
+            result:
+              children: null
+              type: string
+          selected: false
+          title: 转换markdown
+          type: code
+          variables:
+            - value_selector:
+                - "1740904013891"
+                - item
+              variable: url
+        height: 54
+        id: "1740904127108"
+        parentId: "1740904013891"
+        position:
+          x: 128
+          y: 68
+        positionAbsolute:
+          x: 462
+          y: 473.99999999999994
+        selected: false
+        sourcePosition: right
+        targetPosition: left
+        type: custom
+        width: 244
+        zIndex: 1002
+      - data:
+          answer: "{{#1740904127108.result#}}"
+          desc: ""
+          isInIteration: true
+          iteration_id: "1740904013891"
+          selected: false
+          title: 直接回复
+          type: answer
+          variables: []
+        height: 103
+        id: "1740904250559"
+        parentId: "1740904013891"
+        position:
+          x: 432
+          y: 68
+        positionAbsolute:
+          x: 766
+          y: 473.99999999999994
+        selected: false
+        sourcePosition: right
+        targetPosition: left
+        type: custom
+        width: 244
+        zIndex: 1002
+    viewport:
+      x: -17.553836156133684
+      y: -56.38094928720386
+      zoom: 1.058063949821364
